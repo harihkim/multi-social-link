@@ -1,0 +1,11 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="white" />
+  <g stroke="black" stroke-width="3" stroke-linecap="square">
+    <path d="M 35 15 L 35 85" /> <!-- Left vertical of H -->
+    <path d="M 65 15 L 65 85" /> <!-- Right vertical of H -->
+    <path d="M 35 50 L 65 50" /> <!-- Horizontal of H -->
+    <path d="M 95 15 L 95 85" /> <!-- Vertical of k -->
+    <path d="M 95 50 L 135 15" /> <!-- Top diagonal of k -->
+    <path d="M 95 50 L 135 85" /> <!-- Bottom diagonal of k -->
+  </g>
+</svg>
