@@ -4,9 +4,7 @@
     { name: "Twitter/ X", url: "https://twitter.com/yourusername", icon: "twitter" },
     { name: "Instagram", url: "https://instagram.com/yourusername", icon: "instagram" },
     // { name: "GitHub", url: "https://github.com/yourusername", icon: "github" }, // Replace with your URL
-    // { name: "Twitter/ X", url: "https://twitter.com/yourusername", icon: "twitter" }, // Replace with your URL
     // { name: "LinkedIn", url: "https://linkedin.com/in/yourusername", icon: "linkedin" }, // Replace with your URL
-    // { name: "Instagram", url: "https://instagram.com/yourusername", icon: "instagram" }, // Replace with your URL
     // Add more links as needed
   ];
 </script>
@@ -14,8 +12,8 @@
 <main>
   <div class="profile-container">
     <!-- Reference the image directly from the public folder -->
-    <img src="/logo_hk.svg" alt="Profile Picture" class="profile-pic" /> 
-    <h1>Lets connect</h1>
+    <img src="/logo_hk.svg" alt="Profile Picture" class="profile-pic" />
+    <h1>Let's connect</h1>
     <p class="subtitle">Harikrishnan Here</p> <!-- Added class and moved -->
     <ul class="links-list">
       {#each socialLinks as link}
@@ -30,6 +28,7 @@
 </main>
 
 <style>
+  /* Styles now align with the dark blue theme from app.css */
   main {
     display: flex;
     flex-direction: column;
@@ -37,34 +36,40 @@
     justify-content: center;
     min-height: 100vh; /* Ensure it takes full viewport height */
     padding: 1rem;
+    /* background-color is inherited from :root in app.css */
   }
 
   .profile-container {
     text-align: center;
+    padding: 2rem;
+    background-color: rgba(45, 55, 72, 0.3); /* Slightly transparent card background #2d3748 with alpha */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 
   .profile-pic {
-    width: 100px;
+    width: 150px;
     height: 100px;
     border-radius: 50%;
-    margin-bottom: 1rem;
-    background-color: #444; /* Placeholder background */
+    margin-bottom: 1.5rem; /* Increased margin */
+    /* background-color: #2d3748; /* Use button bg color */
+    border: 3px solid #4a5568; /* Add a subtle border */
     display: inline-block;
+    object-fit: cover; /* Ensure image covers the area */
   }
 
   h1 {
-    /* Reduced bottom margin to bring subtitle closer */
-    margin-bottom: 0.5rem; 
-    font-size: 2em;
-    color: #e0e0e0; /* Lighter text color for dark mode */
+    margin-bottom: 0.5rem;
+    font-size: 2.2em; /* Slightly adjusted size */
+    color: #e2e8f0; /* Align with app.css */
+    font-weight: 600; /* Slightly bolder */
   }
 
-  /* Added styles for the subtitle */
   .subtitle {
-    font-size: 1.1em;
-    color: #b0b0b0; /* Slightly dimmer color than h1 */
-    margin-bottom: 2rem; /* Add space before the links */
-    font-weight: 300; /* Lighter font weight */
+    font-size: 1.15em; /* Slightly larger */
+    color: #a0aec0; /* Lighter gray for subtitle */
+    margin-bottom: 2.5rem; /* Increased space before links */
+    font-weight: 300;
   }
 
   .links-list {
@@ -72,7 +77,7 @@
     padding: 0;
     margin: 0;
     width: 100%;
-    max-width: 400px; /* Limit width of the links list */
+    max-width: 350px; /* Adjusted max width */
   }
 
   .links-list li {
@@ -81,25 +86,30 @@
 
   .link-button {
     display: block;
-    padding: 1rem;
-    background-color: #333; /* Darker button background */
-    color: #f0f0f0; /* Light button text */
+    padding: 0.9rem 1rem; /* Adjusted padding */
+    background-color: #2d3748; /* Align with app.css button */
+    color: #e2e8f0; /* Align with app.css */
     text-decoration: none;
     border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Added box-shadow transition */
     font-weight: 500;
+    border: 1px solid transparent; /* Match button style */
   }
 
   .link-button:hover {
-    background-color: #444; /* Slightly lighter on hover */
-    transform: translateY(-2px);
+    background-color: #4a5568; /* Align with app.css button hover */
+    transform: translateY(-3px); /* Slightly more lift */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    border-color: #63b3ed; /* Match button hover border */
   }
 
-  /* Optional: Add specific styles or icons based on class names (e.g., .github, .twitter) */
-  /* Example for GitHub button */
-  .link-button.github {
-    /* background-color: #2dba4e; /* Example GitHub green */
-    /* You could add icons using ::before pseudo-elements and icon fonts/SVGs */
+  /* Optional icon-specific styles can go here */
+  /* Example:
+  .link-button.twitter {
+      background-color: #1DA1F2; // Twitter blue - consider if overriding theme is desired
   }
+  .link-button.twitter:hover {
+       background-color: #0c85d0;
+  } */
 
 </style>
