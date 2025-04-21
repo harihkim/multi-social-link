@@ -1,8 +1,8 @@
 <script>
   // Define your social links here
   const socialLinks = [
-    { name: "Twitter/ X", url: "https://twitter.com/yourusername", icon: "twitter" },
-    { name: "Instagram", url: "https://instagram.com/yourusername", icon: "instagram" },
+    { name: "Twitter/ X", url: "https://x.com/imharihk", icon: "twitter" },
+    { name: "Instagram", url: "https://www.instagram.com/harihk_/", icon: "instagram" },
     // { name: "GitHub", url: "https://github.com/yourusername", icon: "github" }, // Replace with your URL
     // { name: "LinkedIn", url: "https://linkedin.com/in/yourusername", icon: "linkedin" }, // Replace with your URL
     // Add more links as needed
