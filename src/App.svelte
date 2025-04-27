@@ -4,6 +4,7 @@
     // Update icon property to point to the actual SVG file in the public folder
     { name: "Twitter/ X", url: "https://x.com/imharihk", icon: "/x_logo.svg" }, 
     { name: "Instagram", url: "https://www.instagram.com/harihk_/", icon: "/instagram_logo_dark.svg" },
+    { name: "chess.com", url: "https://link.chess.com/friend/9YHSlm", icon: "/chess_com_logo.svg" },
     // { name: "GitHub", url: "https://github.com/yourusername", icon: "github" }, // Replace with your URL
     // { name: "LinkedIn", url: "https://linkedin.com/in/yourusername", icon: "linkedin" }, // Replace with your URL
     // Add more links as needed
