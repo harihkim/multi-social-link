@@ -1,8 +1,9 @@
 <script>
   // Define your social links here
   const socialLinks = [
-    { name: "Twitter/ X", url: "https://x.com/imharihk", icon: "twitter" },
-    { name: "Instagram", url: "https://www.instagram.com/harihk_/", icon: "instagram" },
+    // Update icon property to point to the actual SVG file in the public folder
+    { name: "Twitter/ X", url: "https://x.com/imharihk", icon: "/x_logo.svg" }, 
+    { name: "Instagram", url: "https://www.instagram.com/harihk_/", icon: "/instagram_logo_dark.svg" },
     // { name: "GitHub", url: "https://github.com/yourusername", icon: "github" }, // Replace with your URL
     // { name: "LinkedIn", url: "https://linkedin.com/in/yourusername", icon: "linkedin" }, // Replace with your URL
     // Add more links as needed
@@ -18,7 +19,9 @@
     <ul class="links-list">
       {#each socialLinks as link}
         <li>
-          <a href={link.url} target="_blank" rel="noopener noreferrer" class="link-button {link.icon}">
+          <a href={link.url} target="_blank" rel="noopener noreferrer" class="link-button">
+            <!-- Add img tag for the logo -->
+            <img src={link.icon} alt="{link.name} logo" class="link-icon" />
             {link.name}
           </a>
         </li>
@@ -85,7 +88,9 @@
   }
 
   .link-button {
-    display: block;
+    display: flex; /* Use flexbox to align icon and text */
+    align-items: center; /* Vertically center items */
+    justify-content: center; /* Center content horizontally */
     padding: 0.9rem 1rem; /* Adjusted padding */
     background-color: #2d3748; /* Align with app.css button */
     color: #e2e8f0; /* Align with app.css */
@@ -96,20 +101,18 @@
     border: 1px solid transparent; /* Match button style */
   }
 
+  .link-icon {
+    width: 20px; /* Adjust icon size as needed */
+    height: 20px;
+    margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Helps align if not using flexbox */
+  }
+
   .link-button:hover {
     background-color: #4a5568; /* Align with app.css button hover */
     transform: translateY(-3px); /* Slightly more lift */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
     border-color: #63b3ed; /* Match button hover border */
   }
-
-  /* Optional icon-specific styles can go here */
-  /* Example:
-  .link-button.twitter {
-      background-color: #1DA1F2; // Twitter blue - consider if overriding theme is desired
-  }
-  .link-button.twitter:hover {
-       background-color: #0c85d0;
-  } */
 
 </style>
