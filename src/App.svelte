@@ -49,6 +49,8 @@
     background-color: rgba(45, 55, 72, 0.3); /* Slightly transparent card background #2d3748 with alpha */
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px; /* Added max-width for the container */
+    width: 100%; /* Ensure it tries to fill the available space up to max-width */
   }
 
   .profile-pic {
@@ -79,9 +81,9 @@
   .links-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto; /* Center the list within the container if container is wider */
     width: 100%;
-    max-width: 350px; /* Adjusted max width */
+    max-width: 450px; /* Adjusted max width for the list itself */
   }
 
   .links-list li {
