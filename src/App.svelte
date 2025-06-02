@@ -14,7 +14,7 @@
 <main class="flex flex-col items-center justify-center min-h-screen p-4 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900">
   <div class="text-center p-8 sm:p-10 bg-slate-700/40 backdrop-blur-md rounded-xl shadow-2xl max-w-lg w-full">
     <!-- Reference the image directly from the public folder -->
-    <img src="/logo_hk.svg" alt="Profile Picture" class="w-36 h-36 rounded-full mb-6 border-[3px] border-slate-500 object-cover mx-auto" />
+    <img src="/logo.png" alt="Profile Picture" class="w-36 h-36 rounded-full mb-6 border-[3px] border-slate-500 object-cover mx-auto" />
     <h1 class="mb-4 text-4xl sm:text-5xl text-slate-100 font-semibold">Let's connect</h1>
     <p class="text-lg sm:text-xl text-slate-300 mb-10 font-normal">Harikrishnan Here</p>
     <ul class="list-none p-0 mx-auto w-full max-w-md">
