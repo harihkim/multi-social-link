@@ -11,18 +11,18 @@
   ];
 </script>
 
-<main>
-  <div class="profile-container">
+<main class="flex flex-col items-center justify-center min-h-screen p-4 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900">
+  <div class="text-center p-8 sm:p-10 bg-slate-700/40 backdrop-blur-md rounded-xl shadow-2xl max-w-lg w-full">
     <!-- Reference the image directly from the public folder -->
-    <img src="/logo_hk.svg" alt="Profile Picture" class="profile-pic" />
-    <h1>Let's connect</h1>
-    <p class="subtitle">Harikrishnan Here</p> <!-- Added class and moved -->
-    <ul class="links-list">
+    <img src="/logo_hk.svg" alt="Profile Picture" class="w-36 h-36 rounded-full mb-6 border-[3px] border-slate-500 object-cover mx-auto" />
+    <h1 class="mb-4 text-4xl sm:text-5xl text-slate-100 font-semibold">Let's connect</h1>
+    <p class="text-lg sm:text-xl text-slate-300 mb-10 font-normal">Harikrishnan Here</p>
+    <ul class="list-none p-0 mx-auto w-full max-w-md">
       {#each socialLinks as link}
-        <li>
-          <a href={link.url} target="_blank" rel="noopener noreferrer" class="link-button">
+        <li class="mb-5">
+          <a href={link.url} target="_blank" rel="noopener noreferrer" class="flex items-center justify-center py-3 px-6 bg-slate-700/70 text-slate-100 no-underline rounded-full transition-all ease-in-out duration-300 font-medium border border-slate-600 hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-600 hover:border-transparent hover:text-white hover:-translate-y-1 hover:shadow-xl transform">
             <!-- Add img tag for the logo -->
-            <img src={link.icon} alt="{link.name} logo" class="link-icon" />
+            <img src={link.icon} alt="{link.name} logo" class="w-5 h-5 mr-3" />
             {link.name}
           </a>
         </li>
@@ -32,90 +32,5 @@
 </main>
 
 <style>
-  /* Styles now align with the dark blue theme from app.css */
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Ensure it takes full viewport height */
-    padding: 1rem;
-    /* background-color is inherited from :root in app.css */
-  }
-
-  .profile-container {
-    text-align: center;
-    padding: 2rem;
-    background-color: rgba(45, 55, 72, 0.3); /* Slightly transparent card background #2d3748 with alpha */
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    max-width: 500px; /* Added max-width for the container */
-    width: 100%; /* Ensure it tries to fill the available space up to max-width */
-  }
-
-  .profile-pic {
-    width: 150px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 1.5rem; /* Increased margin */
-    /* background-color: #2d3748; /* Use button bg color */
-    border: 3px solid #4a5568; /* Add a subtle border */
-    display: inline-block;
-    object-fit: cover; /* Ensure image covers the area */
-  }
-
-  h1 {
-    margin-bottom: 0.5rem;
-    font-size: 2.2em; /* Slightly adjusted size */
-    color: #e2e8f0; /* Align with app.css */
-    font-weight: 600; /* Slightly bolder */
-  }
-
-  .subtitle {
-    font-size: 1.15em; /* Slightly larger */
-    color: #a0aec0; /* Lighter gray for subtitle */
-    margin-bottom: 2.5rem; /* Increased space before links */
-    font-weight: 300;
-  }
-
-  .links-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto; /* Center the list within the container if container is wider */
-    width: 100%;
-    max-width: 450px; /* Adjusted max width for the list itself */
-  }
-
-  .links-list li {
-    margin-bottom: 1rem;
-  }
-
-  .link-button {
-    display: flex; /* Use flexbox to align icon and text */
-    align-items: center; /* Vertically center items */
-    justify-content: center; /* Center content horizontally */
-    padding: 0.9rem 1rem; /* Adjusted padding */
-    background-color: #2d3748; /* Align with app.css button */
-    color: #e2e8f0; /* Align with app.css */
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Added box-shadow transition */
-    font-weight: 500;
-    border: 1px solid transparent; /* Match button style */
-  }
-
-  .link-icon {
-    width: 20px; /* Adjust icon size as needed */
-    height: 20px;
-    margin-right: 10px; /* Space between icon and text */
-    vertical-align: middle; /* Helps align if not using flexbox */
-  }
-
-  .link-button:hover {
-    background-color: #4a5568; /* Align with app.css button hover */
-    transform: translateY(-3px); /* Slightly more lift */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
-    border-color: #63b3ed; /* Match button hover border */
-  }
-
+  /* All styles moved to Tailwind utility classes */
 </style>
